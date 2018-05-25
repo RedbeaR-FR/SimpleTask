@@ -1,0 +1,351 @@
+/**     Dev by André "RedbeaR" LECLERCQ         */
+/**     25/05/2018 - @ l'IDEM Ecole Numérique   */
+/**     Comments in french // Have Fun          */
+
+                /**************************/
+                /** --- Base du Style --- */
+                /**************************/
+
+
+/* Réinitialisation des régalges par défaut du navigateur */
+* {
+    border: 0; /* Suppression des bordure par défaut du navigateur */
+    box-sizing: border-box; /* Réinitialisation des bordur des box */
+    margin: 0; /* Suppression des marge par défaut du navigateur */
+    padding: 0; /* Suppression de l'espace par défaut du navigateur */
+}
+
+ul {
+    list-style: none; /* Suppression du style par défaut des liste */
+}
+
+/* Style de base dans le body */
+body {
+    background: #f8f8f8 ; /* Courleur de fond du body */
+    color: #181b3a; /* Couleur du texte dans le body */
+    font-family: 'Roboto', sans-serif; /* Police d'écriture par défaut */
+    font-size: 16px; /* Taille de police par défaut */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* Style des liens par défaut */
+a {
+    text-decoration: none;
+    color: #5235df;
+}
+
+/* Style des titres H2 par défaut */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Cache un élément */
+.hidden {
+    display: none!important;
+}
+
+/* Style du corps de la page */
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+/* Style des boutons focus */
+button:focus {
+    border: none;
+    outline:none;
+}
+
+
+                /********************************/
+                /** --- Style réutilisables --- */
+                /********************************/
+
+
+/* Boutons ronds */
+.btn-round {
+    background: transparent;
+    border-radius: 200px;
+    color: #f8f8f8;
+    font-size: 32px;
+    padding: 6px 8px;
+}
+
+/* Bouton Close */
+.btn-close {
+    color: #eb6b6d;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Bouton Close */
+.btn-delete {
+    color: #eb6b6d;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Bouton validate */
+.btn-validate {
+    color: #4caf50;
+}
+
+/* Bouton mis en évidence */
+.btn-highlight {
+    color: #ffcc80;
+}
+
+/* Activation du curseur en pointer */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+/* Ombres sur les box en material design style */
+.shadow-box-md {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+    .shadow-box-md:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+/* Ombre statiques sur les box en material design style */
+.shadow-box-stat-md {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+    
+/* Ombres dynamiques sur les textes en material design style */
+.shadow-text-dyn-md {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+    .shadow-text-dyn-md:hover {
+        text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+/* Ombres statiques sur les textes en material design style */
+.shadow-text-stat-md {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+                /****************************/
+                /** --- Liste des notes --- */
+                /****************************/
+
+
+/* Style de la liste */
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Style des éléments de la liste */
+.element {
+    background: #ced7db;
+    border-radius: 5px;
+    color: #65677b;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    width: 80vw;
+}
+
+    .element h2 {
+        color: #65677b;
+        font-weight: 700;
+        padding: 0 0 6px 0;
+    }
+
+/* Elements de la liste importants */    
+.element-highlight {
+    background: #65677b;
+    border-radius: 5px;
+    color: #f8f8f8;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    width: 80vw;
+}
+
+    .element-highlight h2 {
+        color: #f8f8f8;
+        font-weight: 700;
+        padding: 0 0 6px 0;
+    }
+
+/* Ajouter une note */
+.add-note {
+    bottom: 0;
+    color: #5235df;
+    font-size: 75px;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+}
+
+/* Supprimer toutes les notes */
+.del-all {
+    bottom: 0;
+    color: #65677b;
+    font-size: 45px;
+    left: 0;
+    padding: 15px;
+    position: fixed;
+}
+
+/* Trier les notes */
+.sorting {
+    color: #65677b;
+    font-size: 45px;
+    left: 0;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+}
+
+
+                /********************************************/
+                /** --- Modale d'Ajout/Edition de Notes --- */
+                /********************************************/
+
+
+/* Overlay de la modale */
+.modal-overlay {
+    align-items: flex-start;
+    background: rgba(73, 33, 67, 0.3);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+/* Box de la modale */
+.modal-box {
+    background: #f8f8f8;
+    border-radius: 5px;
+    flex-basis: 75vw;
+    margin-top: 150px;
+    padding: 15px;
+    position: relative;
+}
+
+/* Titre de la modale */
+.modal-title {
+    color: #65677b;
+    font-size: 28px;
+    padding: 15px 5px;
+}
+
+/* Corps de la modale */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5px;
+}
+
+    .modal-body input,
+    .modal-body textarea {
+        border: none;
+        border-bottom: 1px solid #65677b;
+        border-radius: 5px;
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding: 10px 10px 10px 5px;
+        transition: all .1s ease-in-out;
+    }
+
+        .modal-body input:focus,
+        .modal-body textarea:focus {
+            outline:none;
+            border-bottom: 3px solid #65677b;
+        }
+
+
+/* Footer de la modale */
+.modal-footer {
+    color: #ced7db;
+    font-size: 62px;
+    padding: 0 5px;
+    text-align: right;
+}
+
+    .modal-footer i {
+        padding: 0 0 0 8px;
+    }
+
+
+
+
+                /***********************/
+                /** --- Animations --- */
+                /***********************/
+
+
+/* Animation BounceIn */
+@keyframes bounceIn {
+    from,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* Animation BounceOut */
+@keyframes bounceOut {
+    from,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    
+    0% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    to {
+        opacity: 0;
+        transform: scale3d(0.1, 0.1, 0.1);
+    }
+}
+
+/* Déclaration de BounceIn */
+.bounce-in {
+    animation-duration: 0.32s;
+    animation-name: bounceIn;
+}
+
+/* Déclaration de BounceOut */
+.bounce-out {
+    animation-duration: 0.28s;
+    animation-name: bounceOut;
+}
